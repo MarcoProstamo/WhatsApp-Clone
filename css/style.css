@@ -5,14 +5,14 @@
   --primary-color-selected: #374248;
   --secondary-color: #111b21;
   --secondary-color-selected: #202c33;
-  --accent-color: #e9edef;
+  --accent-color: #aaa;
 }
 
 /* # Components Size */
 :root {
   --wrapper-width: 100vw;
   --wrapper-height: 100vh;
-  --nav-width: 120px;
+  --nav-width: 100px;
   --nav-height: 100%;
   --sidebard-width: calc(3 * var(--nav-width));
   --sidebard-height: 100%;
@@ -24,6 +24,12 @@
   --footer-height: 80px;
   --chat-width: var(--main-width);
   --chat-height: calc(100% - (var(--header-height) + var(--footer-height)));
+}
+
+/* # Reset */
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 /* # Body */
@@ -72,4 +78,47 @@ main {
     height: var(--footer-height);
     background-color: var(--primary-color);
   }
+}
+
+/* # Navbar */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+
+nav .upper-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+nav .lower-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+nav li:hover {
+  background-color: var(--primary-color-selected);
+}
+
+nav li > i {
+  font-size: 2rem;
+  color: var(--accent-color);
 }
